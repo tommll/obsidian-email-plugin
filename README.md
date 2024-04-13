@@ -23,7 +23,7 @@
 ![image](https://github.com/tommll/obsidian-email-plugin/assets/63462213/77a16c1e-22af-4fe7-a471-ef5ea3b329a8)
 
 ## How to use
-#### 1. Set up your mail account
+#### 1. Set up your mail settings
   * Open Emailer's plugin setting
   * Enter sender's email address in the email field
   * Set up password:
@@ -35,6 +35,10 @@
       * Save the password somewhere safe on your computer
         * Note: remove the space between characters. (e.g **"abcdqwejabawqweq"**) 
   * Enter the generated password in the password field
+
+![image](https://github.com/tommll/obsidian-email-plugin/assets/63462213/5b248db1-23dc-4f7a-a6ac-ab44eaddfd7b)
+
+* Reload Obsidian: using the "**Reload app without saving**" command
 
 #### 2. Emailing your notes 
 * Highlight a piece of text in Obsidian note
@@ -53,3 +57,7 @@
 # multiple recepients
 "bob@gmail.com, alice@gmail.com"
 ```
+
+* Sending email successfully
+
+![image](https://github.com/tommll/obsidian-email-plugin/assets/63462213/eb083da7-8745-42d4-9855-e3c122dc89c9)
