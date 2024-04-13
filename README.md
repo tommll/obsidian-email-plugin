@@ -1,6 +1,8 @@
 # Email sender plugin for Obsidian
 - Sending your Obsidian notes to people's mail inboxes
 
+[Screencast from 2024-04-13 14-51-25.webm](https://github.com/tommll/obsidian-email-plugin/assets/63462213/3be28c50-8893-4f8c-acdc-0d118a93abd3)
+
 ## How to install
 #### 1. Install these 2 Obsidian plugins
   1. [BRAT](https://obsidian.md/plugins?id=obsidian42-brat)
