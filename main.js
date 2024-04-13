@@ -11200,11 +11200,11 @@ var EmailSender = class {
       }
     });
   }
-  sendEmail(content, recipient) {
+  sendEmail(content, subject, recipient) {
     const mailOptions = {
       from: this.fromEmail,
       to: recipient,
-      subject: "Email Subject",
+      subject,
       text: content
     };
     console.log("start sending email");
@@ -11231,11 +11231,14 @@ var EmailModal = class extends import_obsidian2.Modal {
     const { contentEl } = this;
     contentEl.createEl("h1", { text: "Send selected content to?" });
     new import_obsidian2.Setting(contentEl).setName("Email").addText((text) => text.onChange((value) => {
-      this.result = value;
+      this.content = value;
+    }));
+    new import_obsidian2.Setting(contentEl).setName("Subject").addText((text) => text.onChange((value) => {
+      this.subject = value;
     }));
     new import_obsidian2.Setting(contentEl).addButton((btn) => btn.setButtonText("Send").setCta().onClick(() => {
       this.close();
-      this.onSubmit(this.result);
+      this.onSubmit(this.content, this.subject);
     }));
   }
   onClose() {
@@ -11262,11 +11265,11 @@ var EmailSenderPlugin = class extends import_obsidian3.Plugin {
       id: "enter-email",
       name: "Send to email",
       editorCallback: (editor) => {
-        new EmailModal(this.app, editor, (res) => {
-          const addresses = parseEmails(res);
+        new EmailModal(this.app, editor, (content, subject) => {
+          const addresses = parseEmails(content);
           addresses.forEach((address) => {
             const selection = editor.getSelection();
-            this.emailSender.sendEmail(selection, address);
+            this.emailSender.sendEmail(selection, subject, address);
           });
         }).open();
       }
