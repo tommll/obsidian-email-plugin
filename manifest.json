@@ -1,11 +1,7 @@
 {
 	"id": "emailer",
 	"name": "Emailer",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"author": "tommll",
+	"description": "Sending your Obsidian notes to people's mail inboxes.",
+	"repo": "https://github.com/tommll/obsidian-email-plugin"
 }
