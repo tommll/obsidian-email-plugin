@@ -57,3 +57,7 @@
 # multiple recepients
 "bob@gmail.com, alice@gmail.com"
 ```
+
+* Sending email successfully
+
+![image](https://github.com/tommll/obsidian-email-plugin/assets/63462213/eb083da7-8745-42d4-9855-e3c122dc89c9)
