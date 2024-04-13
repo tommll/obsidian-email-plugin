@@ -10,7 +10,7 @@
 * Search for command "BRAT: Plugins: Add a beta plugin with frozen version based on a release tag" in your Obsidian
 * In the pop-up window, enter
   * Repository: **https://github.com/tommll/obsidian-email-plugin**
-  * Relase version tag: **v1.0**
+  * Relase version tag: [latest verision tag](https://github.com/tommll/obsidian-email-plugin/releases/latest) (e.g `v1.0`)
 
 #### 3. Set up send-note-to-emails command
 * Open "Customizable Menu"'s plugin setting
