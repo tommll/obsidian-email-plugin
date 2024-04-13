@@ -1,7 +1,10 @@
 {
-	"id": "emailer",
-	"name": "Emailer",
-	"author": "tommll",
-	"description": "Sending your Obsidian notes to people's mail inboxes.",
-	"repo": "https://github.com/tommll/obsidian-email-plugin"
+  "id": "emailer",
+  "name": "Emailer",
+  "version": "1.1",
+  "minAppVersion": "0.15.0",
+  "isDesktopOnly": true,
+  "author": "tommll",
+  "description": "Sending your Obsidian notes to people's mail inboxes.",
+  "repo": "https://github.com/tommll/obsidian-email-plugin"
 }
