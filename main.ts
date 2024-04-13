@@ -26,11 +26,11 @@ export default class EmailSenderPlugin extends Plugin {
 			id: "enter-email",
 			name: "Send to email",
 			editorCallback: (editor: Editor) => {
-				new EmailModal(this.app, editor, (res) => {
-					const addresses = parseEmails(res);
+				new EmailModal(this.app, editor, (content, subject) => {
+					const addresses = parseEmails(content);
 					addresses.forEach((address) => {
 						const selection = editor.getSelection();
-						this.emailSender.sendEmail(selection, address)
+						this.emailSender.sendEmail(selection, subject, address)
 					})
 				}).open();
 			},

@@ -1,14 +1,15 @@
 import { App, Editor, Modal, Setting } from 'obsidian';
 
 export class EmailModal extends Modal {
-  result: string;
+  content: string;
+  subject: string;
   editor: Editor;
-  onSubmit: (result: string) => void;
+  onSubmit: (result: string, subject: string) => void;
 
-  constructor(app: App, editor: Editor, onSubmit: (result: string) => void) {
+  constructor(app: App, editor: Editor, onSubmit: (result: string, subject: string) => void) {
     super(app);
     this.onSubmit = onSubmit;
-	this.editor = editor
+	  this.editor = editor
   }
 
   onOpen() {
@@ -20,7 +21,14 @@ export class EmailModal extends Modal {
       .setName("Email")
       .addText((text) =>
         text.onChange((value) => {
-          this.result = value
+          this.content = value
+        }));
+
+    new Setting(contentEl)
+      .setName("Subject")
+      .addText((text) =>
+        text.onChange((value) => {
+          this.subject = value
         }));
 
     new Setting(contentEl)
@@ -30,7 +38,7 @@ export class EmailModal extends Modal {
           .setCta()
           .onClick(() => {
             this.close();
-            this.onSubmit(this.result);
+            this.onSubmit(this.content, this.subject);
           }));
   }
 

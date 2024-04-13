@@ -20,11 +20,11 @@ export class EmailSender {
 		});
 	}
 
-	sendEmail (content: string, recipient: string) {
+	sendEmail (content: string, subject: string, recipient: string) {
 		const mailOptions = {
 			from: this.fromEmail,
 			to: recipient,
-			subject: 'Email Subject',
+			subject: subject,
 			text: content,
 		};
 
